@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/style/images/poule.jpg">
+    <title>Poussinière</title>
+</head>
+<body>
+    <div id="centre"><H1>Poussinière</H1></div>
+    <div id="block">
+    <div id="centre">
+        <div id="rectangle">
+            <div id="centre"><br>Nombre de repas distribués :</br></div>
+            <div id="centre"><h2>{{repas_distribues}}</h2></div>
+        </div>
+    </div>
+        <div id="centre">
+        <div id="rectangle">
+            <div id="centre"><br>Fréquence actuelle :<br></div>
+            <div id="centre"><h2>{{intervalle}} min</h2></div>
+        </div>
+    </div>
+    </div>
+    <p></p>
+    <div id="centre">
+        Paramétrage de l'intervalle de distribution de la nourriture des poussins.
+    </div>
+    <!-- Les valeurs d'action et method ainsi que le nom du champs doivent être modifiées pour corresondre à ce qu'attend l'API -->
+    <p></p>
+    <div id="rectangle-2">
+    <form action="/intervalle/modification" method="post">
+        <label for="intervalle">Intervalle de distribution :</label>
+        <p></p>
+        <input type="number" name="nouvel_intervalle" id="intervalle" value="">
+        <p></p>
+        <input id="Button" type="submit" value="Envoyer">
+    </form>
+    </div>
+    </p>
+    <div>
+        <div id="centre">
+            <div id="Button-2">
+                <a href="/repas/init">Page d'initialisation</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
